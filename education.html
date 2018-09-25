@@ -3,38 +3,7 @@
 <head>
   <title>cv</title>
      
-    <style> 
-div {
-    background-color: lightpink;
-    position: relative;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    -webkit-animation-direction: reverse; /* Safari 4.0 - 8.0 */
-    animation-name: example;
-    animation-duration: 4s;
-    animation-direction: reverse;    
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
-    0%   {background-color:orangered; left:0px; top:0px;}
-    25%  {background-color:lightgoldenrodyellow; left:200px; top:0px;}
-    50%  {background-color:orangered; left:200px; top:200px;}
-    75%  {background-color:lightgoldenrodyellow; left:0px; top:200px;}
-    100% {background-color:orange; left:0px; top:0px;}
-}
-
-/* Standard syntax */
-@keyframes example {
-    0%   {background-color:orangered; left:0px; top:0px;}
-    25%  {background-color:lightgoldenrodyellow; left:200px; top:0px;}
-    50%  {background-color:orangered; left:200px; top:200px;}
-    75%  {background-color:lightgoldenrodyellow; left:0px; top:200px;}
-    100% {background-color:orange; left:0px; top:0px;}
-}
-
-</style>
-      <style>
+    <style>
         body {
   background: linear-gradient(to left, #FF512F , #DD2476);
   color: #282828;
@@ -66,11 +35,11 @@ h1 {
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
         <li><a href="education.html">Education </a></li>
         <li><a href="experience.html">Experience</a></li>
         <li><a href="skills.html">Skills</a></li>
-        <li><a href="cv.html">Back home</a></li>
+        <li><a href="index.html">Back home</a></li>
+        <li><a href="contact.html">Contact me</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
       </ul>
@@ -82,22 +51,49 @@ h1 {
   <div class="container text-center">
     <h1>Educational Background</h1>   
      <h5 style="color:royalblue;"> NATIONAL UNIVERSITY OF COMPUTER & EMERGING SCIENCES (FAST-NU), LAHORE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [2016 - present]</h5>
-    Bachelors of Computer Science
+        <div id="l1">
+       Bachelors of Computer Science
     <ul>
     <li> Major in Computer Science </li>
     <li>Part of many societies as extended exe and member</li>
     </ul>
-
+         </div>
     <h5 style="color:royalblue;"> LAHORE COLLEGE FOR WOMEN UNIVERSITY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  [2014 - 2016]</h5>
-    FSc. Pre-engineering 
-
+    <div id="l2">
+      FSc. Pre-engineering 
+        </div>
     <h5 style="color:royalblue;"> BEACONHOUSE SCHOOL SYSTEM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; [2004 - 2014]</h5>
-    Matriculation
+   <div id="l3">
+       Matriculation
     <ul>
         <li>President of Mathematics’ society </li>
     <li> Awarded with many certificates (student of the month, annual prize distribution etc.)</li>
     </ul>
-
+       </div>
+    <h2>  <span id="showdata">Press any key</span> </h2>
   </div>
 </div>
-  
+    <script>
+
+        $('span').css('display', 'none');
+        $(document).ready(function () {
+            $('#l1').css('display', 'none')
+            $('#l2').css('display', 'none')
+            $('#l3').css('display', 'none')
+            $('#showdata').css({
+                color: 'red',
+                display: 'inline'
+            }).fadeOut(5000);
+        });
+          $(document).ready(function () {
+            $(document).keypress(function () {
+                $('#l1').show('slow')
+                $('#l2').show('slow')
+                $('#l3').show('slow')
+            });
+        })
+        ;
+
+
+    </script>
+ 

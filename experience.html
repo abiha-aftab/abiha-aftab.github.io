@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>CV</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -34,11 +34,11 @@ h1 {
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
         <li><a href="education.html">Education </a></li>
         <li><a href="experience.html">Experience</a></li>
         <li><a href="skills.html">Skills</a></li>
-        <li><a href="cv.html">Back home</a></li>
+        <li><a href="index.html">Back home</a></li>
+        <li><a href="contact.html">Contact me</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
       </ul>
@@ -59,26 +59,42 @@ table {
   }
   </style>
   <style>
-   @keyframes slidein {
-  from {
-    margin-left: 80%;
-    width: 100%; 
-  }
+      @keyframes slidein {
+          from {
+              margin-left: 80%;
+              width: 100%;
+          }
 
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
+          to {
+              margin-left: 0%;
+              width: 100%;
+          }
+      }
+      div {
+    background:#eee;
+}
+
+.zoom {
+  -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.zoom:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
 </style>
+    
+  
 <div class="jumbotron">
   <div class="container text-center">
-  <h1> <u style="animation-name:slidein; animation-duration:6s; animation-iteration-count:1 ;animation-delay:4s"> Experience </u> </h1>
-     <table border="1">
+  <h1> <u style="animation-name:slidein; animation-duration:6s; animation-iteration-count:1 ;animation-delay:2s"> Experience </u> </h1>
+      
+     <table  id='outer' border="1" style=display:none>
                 <tr id="heading">
-                    <td> <h5  style="color:royalblue;">Projects</h5> </td>
-                    <td><h5 style="color:royalblue;">Post</h5></td>
-                    <td><h5 style="color:royalblue;"> Responsiblities</h5> </td>
-                    <td> <h5 style="color:royalblue;">Year </h5></td>
+                    <td> <h5  class="zoom" style='font-size:20px;top:50px;left:50px' color:'red';>Projects</h5> </td>
+                    <td><h5 class="zoom" style='font-size:20px;top:50px;left:50px' color:'royalblue';>Post</h5></td>
+                    <td><h5 class="zoom" style='font-size:20px;top:50px;left:50px' color:'royalblue';> Responsiblities</h5> </td>
+                    <td> <h5 class="zoom" style='font-size:20px;top:50px;left:50px' color:'royalblue';>Year </h5></td>
                 </tr>
 
          <tr>
@@ -107,3 +123,9 @@ table {
   </div>
 </div>
   
+      <script>
+          $(document).ready(function () {
+              $("#outer").fadeIn(3000);
+          });
+    </script>
+</body>
